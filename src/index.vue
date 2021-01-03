@@ -336,7 +336,7 @@ export default {
     margin-top: 5px;
     width: 6px;
     height: 40px;
-    background: url('https://p1.meituan.net/scarlett/7cf8c04fc3bea1573854f41f5657277c911.png') no-repeat center top;
+    background: url('') no-repeat center top;
     background-size: 6px;
   }
   & > .guide-tips {
@@ -349,7 +349,7 @@ export default {
   & > .guide-decorate {
     width: 6px;
     height: 40px;
-    background: url('https://p0.meituan.net/scarlett/b2dbd2e17aa909ab9ca57fbff08ee855901.png') no-repeat center top;
+    background: url('') no-repeat center top;
     background-size: 6px;
     margin-bottom: 5px;
   }
