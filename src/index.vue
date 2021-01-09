@@ -250,6 +250,7 @@ export default {
       }
     },
     onHandleNextStep () {
+      console.log(1111)
       this.clearTipsAndNextNode()
       this.guideIndex += 1
       this.resetPreGuideNode()
@@ -334,9 +335,10 @@ export default {
   line-height: 20px;
   & > .guide-decorate {
     margin-top: 5px;
-    width: 6px;
+    // width: 6px;
     height: 40px;
-    background: url("") no-repeat center top;
+    background: url("https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png")
+      no-repeat center top;
     background-size: 6px;
   }
   & > .guide-tips {
@@ -347,9 +349,10 @@ export default {
 }
 .wrap-y {
   & > .guide-decorate {
-    width: 6px;
+    // width: 6px;
     height: 40px;
-    background: url("") no-repeat center top;
+    background: url("https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png")
+      no-repeat center top;
     background-size: 6px;
     margin-bottom: 5px;
   }

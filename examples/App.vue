@@ -9,10 +9,13 @@
                  :allGuideNodes="allGuideNodes"
                  uniqueName="test" />
     <div id="aaa">
-      11111
+      引导1
+    </div>
+    <div id="bbb">
+      引导2
     </div>
     <div>
-      <button @click="aaa">点击</button>
+      <button @click="aaa">开始引导</button>
     </div>
   </div>
 </template>
@@ -25,44 +28,51 @@ export default {
     return {
       show: false,
       allGuideNodes: [
-        // {
-        //   targetNode: null,
-        //   nodeId: 2,
-        //   tips: {
-        //     content: '<div>我是tipsContent</div>'
-        //   },
-        //   decorateContent: `<div><div>我是decorateContent</div>
-        //     <div> 我是decorateContent</div>
-        //   <div>我是decorateContent</div>
-        //   <div>我是decorateContent</div>
-        //   <div>我是decorateContent</div>
-        //   <div>我是decorateContent</div>
-        //   <div>我是decorateContent</div>
-        //             <div>我是decorateContent</div>
-
-        //   <div>我是decorateContent</div>
-
-        //   <div>我是decorateContent</div>
-
-        //   <div>我是decorateContent</div>
-
-        //   <div>我是decorateContent</div></div >`
-
-        // },
         {
           targetNode: null,
+          nodeId: 2,
+          priority: 1,
+          tips: {
+            content: '<div>我是tipsContent</div>'
+          },
+          decorateContent: `<div>
+          <div>我是decorateContent</div>
+            <div> 我是decorateContent</div>
+          <div>我是decorateContent</div>
+          <div>我是decorateContent</div>
+          <div>我是decorateContent</div>
+          <div>我是decorateContent</div>
+          <div>我是decorateContent</div>
+          <div>我是decorateContent</div>
+          <div>我是decorateContent</div>
+          <div>我是decorateContent</div>
+          <div>我是decorateContent</div>
+           <div>我是decorateContent</div>
+            <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+            <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+            <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+             <div>我是decorateContent</div>
+          <div>我是decorateContent</div></div>`
+        },
+        {
+          targetNode: null,
+          priority: 2,
           nodeId: 3,
           tips: {
             content: '<div>我是tipsContent</div>'
           },
-          decorateContent: `<div><div>我是decorateContent</div>
-            < div > 我是decorateContent</>
-          <div>我是decorateContent</div>
-          <div>我是decorateContent</div>
-          <div>我是decorateContent</div>
-          <div>我是decorateContent</div>
-          <div>我是decorateContent</div>
-          <div>我是decorateContent</div></div >`
+          decorateContent: `<div>我是decorateContent</div>`
 
         }
       ]
@@ -70,18 +80,17 @@ export default {
   },
   methods: {
     aaa () {
-      const dom = document.getElementById('aaa')
-      setTimeout(() => {
-        this.allGuideNodes = this.allGuideNodes.map((item) => {
-          item.targetNode = dom
-          return item
-        })
-        this.show = true
+      const aaa = document.getElementById('aaa')
+      const bbb = document.getElementById('bbb')
+      this.allGuideNodes = this.allGuideNodes.map((item, index) => {
+        if (index === 0) {
+          item.targetNode = aaa
+        } else {
+          item.targetNode = bbb
+        }
+        return item
       })
-      // const ref = this.$refs.FinFinNoviceGuide
-      // // ref.beginGuide()
-
-      // console.log(ref, 'ref')
+      this.show = true
     }
   },
   mounted () {
@@ -97,8 +106,8 @@ export default {
 #aaa {
   /* background: red; */
 }
-#app {
+/* #app {
   height: 100%;
   width: 100%;
-}
+} */
 </style>
