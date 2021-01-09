@@ -117,9 +117,9 @@ export default {
       this.nextStepNode = document.createElement('div')
       this.nextStepNode.className = 'guide-next-step'
       this.cloneTargetNode = document.createElement('div')
-      this.nextStepNode.addEventListener('click', () => {
-        this.onHandleNextStep()
-      })
+      // this.nextStepNode.addEventListener('click', () => {
+      //   this.onHandleNextStep()
+      // })
     },
     getAllStyle () {
       const { targetNode } = this.guideNodes
@@ -335,7 +335,7 @@ export default {
   line-height: 20px;
   & > .guide-decorate {
     margin-top: 5px;
-    // width: 6px;
+    width: 6px;
     height: 40px;
     background: url("https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png")
       no-repeat center top;
@@ -349,7 +349,7 @@ export default {
 }
 .wrap-y {
   & > .guide-decorate {
-    // width: 6px;
+    width: 6px;
     height: 40px;
     background: url("https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png")
       no-repeat center top;
